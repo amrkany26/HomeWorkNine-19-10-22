@@ -1,0 +1,48 @@
+$primaryColor: rgba(189, 192, 205, 0.331);
+@mixin divis($try:black){
+    height: 400px;
+    background-color:  rgba(189, 192, 205, 0.331);
+    border: solid 5px;
+}
+@mixin goodbad ($colory:red){
+    height: 70px;
+    width: 70px;
+    background-color: $colory;
+    font-size: larger;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+body{
+  background-image: url(https://picsum.photos/1400/650?grayscale);
+  background-repeat: no-repeat;
+}
+
+.container{
+    @include divis();
+    width: 500px;
+    height: 380px;
+    
+}
+.input{
+    border-radius: 25px;
+  border: 1px solid #000000;
+  padding: 10px;
+  width: 120px;
+  height: 10px;
+}
+.input2{
+    border-radius: 20px;
+    border: 1px solid #010101;
+    padding: 10px;
+    width: 130px;
+    height: 90px;
+  }
+  .box{
+    @include goodbad(red);
+    
+
+  }
+  #box2{
+    @include goodbad(green)
+  }
